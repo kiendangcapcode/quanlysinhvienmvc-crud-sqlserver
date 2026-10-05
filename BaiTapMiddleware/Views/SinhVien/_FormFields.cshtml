@@ -1,0 +1,7 @@
+@model SinhVien
+<div class="mb-3"><label asp-for="MaSinhVien" class="form-label"></label><input asp-for="MaSinhVien" class="form-control" /><span asp-validation-for="MaSinhVien" class="text-danger"></span></div>
+<div class="mb-3"><label asp-for="HoTen" class="form-label"></label><input asp-for="HoTen" class="form-control" /><span asp-validation-for="HoTen" class="text-danger"></span></div>
+<div class="mb-3"><label asp-for="NgaySinh" class="form-label"></label><input asp-for="NgaySinh" type="date" class="form-control" /><span asp-validation-for="NgaySinh" class="text-danger"></span></div>
+<div class="mb-3"><label asp-for="GioiTinh" class="form-label"></label><select asp-for="GioiTinh" class="form-select"><option value="">-- Chọn giới tính --</option><option>Nam</option><option>Nữ</option><option>Khác</option></select><span asp-validation-for="GioiTinh" class="text-danger"></span></div>
+<div class="mb-3"><label asp-for="Email" class="form-label"></label><input asp-for="Email" class="form-control" /><span asp-validation-for="Email" class="text-danger"></span></div>
+<div class="mb-3"><label asp-for="Lop" class="form-label"></label><input asp-for="Lop" class="form-control" /><span asp-validation-for="Lop" class="text-danger"></span></div>

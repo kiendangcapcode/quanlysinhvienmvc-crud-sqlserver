@@ -6,6 +6,10 @@
 
 Ứng dụng ASP.NET Core MVC dùng **Entity Framework Core Code First** và SQL Server. Chức năng gồm xem/tìm kiếm danh sách, thêm, xem chi tiết, sửa và xóa sinh viên. Database `QuanLySinhVienMvcDb` cùng bảng sinh viên được tạo tự động khi chạy ứng dụng lần đầu.
 
+## Bài tập Middleware
+
+Project tiếp nối quản lý sinh viên, thêm request logging và chặn ID không hợp lệ: [mở thư mục bài Middleware](./BaiTapMiddleware/README.md). Video minh chứng nằm trong thư mục đó.
+
 ## Chạy bằng Visual Studio 2026
 
 1. Mở `QuanLySinhVien.sln`.

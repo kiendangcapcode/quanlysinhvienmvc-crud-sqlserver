@@ -1,0 +1,19 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# IDE and OS files
+.idea/
+.vscode/
+*.userosscache
+*.sln.docstates
+Thumbs.db
+desktop.ini
+
+# User-specific local settings
+appsettings.Local.json

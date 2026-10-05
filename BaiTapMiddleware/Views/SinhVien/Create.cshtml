@@ -1,0 +1,15 @@
+@model SinhVien
+@{
+    ViewData["Title"] = "Thêm sinh viên";
+}
+<h1>Thêm sinh viên</h1>
+<hr />
+<div class="row"><div class="col-md-6">
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <partial name="_FormFields" model="Model" />
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+    </form>
+</div></div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }
