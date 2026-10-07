@@ -15,6 +15,8 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<QuanLySinhVienContext>();
     db.Database.EnsureCreated();
+    // EnsureCreated không cập nhật bảng đã tồn tại, nên bổ sung cột ảnh cho database cũ.
+    db.Database.ExecuteSqlRaw("IF COL_LENGTH(N'dbo.SinhViens', N'ImagePath') IS NULL ALTER TABLE dbo.SinhViens ADD ImagePath nvarchar(255) NULL;");
 }
 
 // Configure the HTTP request pipeline.
@@ -26,6 +28,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+// Phục vụ file upload phát sinh lúc chạy (MapStaticAssets chỉ lập manifest lúc build).
+app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();

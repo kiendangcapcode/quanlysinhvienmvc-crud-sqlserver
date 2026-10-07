@@ -15,11 +15,21 @@
 </form>
 
 <table class="table table-bordered table-striped">
-    <thead class="table-light"><tr><th>Mã sinh viên</th><th>Họ và tên</th><th>Ngày sinh</th><th>Giới tính</th><th>Email</th><th>Lớp</th><th>Thao tác</th></tr></thead>
+    <thead class="table-light"><tr><th>Ảnh</th><th>Mã sinh viên</th><th>Họ và tên</th><th>Ngày sinh</th><th>Giới tính</th><th>Email</th><th>Lớp</th><th>Thao tác</th></tr></thead>
     <tbody>
     @foreach (var item in Model)
     {
         <tr>
+            <td>
+                @if (!string.IsNullOrWhiteSpace(item.ImagePath))
+                {
+                    <img src="@item.ImagePath" alt="Ảnh của @item.HoTen" style="width: 64px; height: 64px; object-fit: cover;" />
+                }
+                else
+                {
+                    <span>Chưa có ảnh</span>
+                }
+            </td>
             <td>@item.MaSinhVien</td><td>@item.HoTen</td><td>@item.NgaySinh?.ToString("dd/MM/yyyy")</td><td>@item.GioiTinh</td><td>@item.Email</td><td>@item.Lop</td>
             <td class="text-nowrap">
                 <a asp-action="Details" asp-route-id="@item.Id">Xem</a> |
@@ -28,6 +38,6 @@
             </td>
         </tr>
     }
-    @if (!Model.Any()) { <tr><td colspan="7" class="text-center">Chưa có sinh viên nào.</td></tr> }
+    @if (!Model.Any()) { <tr><td colspan="8" class="text-center">Chưa có sinh viên nào.</td></tr> }
     </tbody>
 </table>

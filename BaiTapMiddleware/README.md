@@ -2,9 +2,10 @@
 
 ## Video minh chứng
 
-[Xem video chạy và kiểm tra middleware](./bandicam%202026-10-05%2009-28-54-322.mp4)
+- [Video mới nhất (07/10/2026)](./bandicam%202026-10-07%2009-09-27-696.mp4)
+- [Video chạy middleware trước đó](./bandicam%202026-10-05%2009-28-54-322.mp4)
 
-Bài này tiếp tục mini project quản lý sinh viên và thêm `RequestLoggingMiddleware` để:
+Bài này tiếp tục mini project quản lý sinh viên, có upload ảnh `.jpg` cho từng sinh viên, và thêm `RequestLoggingMiddleware` để:
 
 - Ghi thời gian tới millisecond, HTTP method và URL path trước khi request vào Controller.
 - Ghi status code sau khi xử lý xong request.

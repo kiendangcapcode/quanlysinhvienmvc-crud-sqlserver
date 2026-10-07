@@ -5,3 +5,12 @@
 <div class="mb-3"><label asp-for="GioiTinh" class="form-label"></label><select asp-for="GioiTinh" class="form-select"><option value="">-- Chọn giới tính --</option><option>Nam</option><option>Nữ</option><option>Khác</option></select><span asp-validation-for="GioiTinh" class="text-danger"></span></div>
 <div class="mb-3"><label asp-for="Email" class="form-label"></label><input asp-for="Email" class="form-control" /><span asp-validation-for="Email" class="text-danger"></span></div>
 <div class="mb-3"><label asp-for="Lop" class="form-label"></label><input asp-for="Lop" class="form-control" /><span asp-validation-for="Lop" class="text-danger"></span></div>
+<div class="mb-3">
+    <label for="anhDaiDien" class="form-label">Ảnh sinh viên (chỉ nhận JPG, tối đa 5 MB)</label>
+    @if (!string.IsNullOrWhiteSpace(Model?.ImagePath))
+    {
+        <div class="mb-2"><img src="@Model.ImagePath" alt="Ảnh hiện tại của @Model.HoTen" style="width: 100px; height: 100px; object-fit: cover;" /></div>
+    }
+    <input id="anhDaiDien" name="anhDaiDien" type="file" class="form-control" accept=".jpg,image/jpeg" />
+    <span class="text-danger">@Html.ValidationMessage("anhDaiDien")</span>
+</div>

@@ -32,4 +32,8 @@ public class SinhVien
     [Display(Name = "Lớp")]
     [StringLength(50)]
     public string? Lop { get; set; }
+
+    [Display(Name = "Ảnh sinh viên")]
+    [StringLength(255)]
+    public string? ImagePath { get; set; }
 }

@@ -17,3 +17,6 @@ desktop.ini
 
 # User-specific local settings
 appsettings.Local.json
+
+# Uploaded student photos are local runtime files, not source assets.
+wwwroot/uploads/sinhvien/

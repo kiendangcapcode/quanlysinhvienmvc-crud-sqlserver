@@ -10,4 +10,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.4" />
   </ItemGroup>
 
+  <!-- The Middleware assignment is a separate project nested in this repository. -->
+  <ItemGroup>
+    <Compile Remove="BaiTapMiddleware\**\*.cs" />
+    <Content Remove="BaiTapMiddleware\**\*" />
+    <EmbeddedResource Remove="BaiTapMiddleware\**\*" />
+    <None Remove="BaiTapMiddleware\**\*" />
+  </ItemGroup>
+
 </Project>

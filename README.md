@@ -4,11 +4,11 @@
 
 [Xem video demo trên GitHub](./bandicam%202026-10-04%2021-22-06-426.mp4)
 
-Ứng dụng ASP.NET Core MVC dùng **Entity Framework Core Code First** và SQL Server. Chức năng gồm xem/tìm kiếm danh sách, thêm, xem chi tiết, sửa và xóa sinh viên. Database `QuanLySinhVienMvcDb` cùng bảng sinh viên được tạo tự động khi chạy ứng dụng lần đầu.
+Ứng dụng ASP.NET Core MVC dùng **Entity Framework Core Code First** và SQL Server. Chức năng gồm xem/tìm kiếm danh sách, thêm, xem chi tiết, sửa và xóa sinh viên. Có thể tải ảnh sinh viên dạng `.jpg`; ứng dụng kiểm tra cả phần mở rộng và chữ ký file, lưu ảnh vào `wwwroot/uploads/sinhvien` và lưu đường dẫn trong database. Database `QuanLySinhVienMvcDb` cùng bảng sinh viên được tạo tự động khi chạy ứng dụng lần đầu.
 
 ## Bài tập Middleware
 
-Project tiếp nối quản lý sinh viên, thêm request logging và chặn ID không hợp lệ: [mở thư mục bài Middleware](./BaiTapMiddleware/README.md). Video minh chứng nằm trong thư mục đó.
+Project tiếp nối quản lý sinh viên, thêm request logging và chặn ID không hợp lệ: [mở thư mục bài Middleware](./BaiTapMiddleware/README.md). [Xem video Middleware mới nhất](./BaiTapMiddleware/bandicam%202026-10-07%2009-09-27-696.mp4).
 
 ## Chạy bằng Visual Studio 2026
 

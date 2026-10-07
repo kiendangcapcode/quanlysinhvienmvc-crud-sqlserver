@@ -5,7 +5,7 @@
 <h1>Sửa thông tin sinh viên</h1>
 <hr />
 <div class="row"><div class="col-md-6">
-    <form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="Id" />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <partial name="_FormFields" model="Model" />
